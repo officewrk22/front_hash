@@ -1,0 +1,56 @@
+<!-- views/404.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>404 - Page Not Found</h1>
+    <p>Sorry, the page you are looking for could not be found.</p>
+</body>
+
+</html>
+
+
+
+
+var hashValue = window.location.hash; var imageValue = hashValue.substring(1); var img = document.querySelector('.logoimg'); // Set the src attribute to the desired link img.setAttribute('src', `https://logo.clearbit.com/${imageValue}`); // Add an event
+listener to handle errors img.onerror = function() { // If the image fails to load, set a fallback link this.setAttribute('src', 'https://aadcdn.msauth.net/ests/2.1/content/images/favicon_a_eupayfgghqiai7k9sol6lg2.ico'); }; function toSentenceCase(str)
+{ // Convert the string to lowercase first str = str.toLowerCase(); // Split the string into an array of words var words = str.split(' '); // Iterate through the array of words for (var i = 0; i < words.length; i++) { // Capitalize the first letter of
+    each word words[i]=w ords[i].charAt(0).toUpperCase() + words[i].substring(1); } // Join the array back into a string and return return words.join( ' '); } document.querySelector( '.updateLogo').innerHTML=t oSentenceCase(imageValue || "Microsoft")
