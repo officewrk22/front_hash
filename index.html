@@ -165,13 +165,16 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script>
-    function toSentenceCase(str) {
+  function toSentenceCase(str) {
+      if(str) {
         var textBeforeDot = str.substring(0, str.indexOf('.'));
         // Convert the string to lowercase first
         textBeforeDot = textBeforeDot.toLowerCase();
 
         // Capitalize the first letter of the string
         return textBeforeDot.charAt(0).toUpperCase() + textBeforeDot.slice(1);
+      }
+      return "";
     }
     /* global $ */
     $(document).ready(function() {
